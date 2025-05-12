@@ -1,0 +1,100 @@
+/* ▼通用區▼ */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("../images/background.jpg");
+	background-attachment: fixed;
+}
+
+.main {
+
+	.bg-back {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+.nav {
+
+	.navbar {
+		padding: 0 !important;
+	}
+
+	.nav-hr {
+		border-left: 1px solid gray;
+		border-right: 1px solid gray;
+	}
+}
+
+/* navAnime */
+.nav {
+
+	li {
+		transition: all .3s;
+
+		&:hover {
+			background-color: yellowgreen;
+		}
+
+		&:hover a {
+			font-weight: bold;
+			color: white;
+		}
+	}
+}
+
+.footer {
+
+	.container {
+		background-color: rgb(162, 238, 231) !important;
+		margin-top: 40px;
+		padding: 10px 0;
+	}
+
+	.row {
+
+		text-align: center;
+		line-height: 2;
+		color: black;
+		font-size: 12px;
+		font-weight: bold;
+	}
+}
+
+/* ▲通用區▲ */
+
+
+
+.content {
+	margin: 40px 0;
+}
+
+
+/* 商品區 */
+.cargo {
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin: 10px;
+
+	a {
+		text-decoration: none;
+		color: white;
+		background-color: royalblue;
+		padding: 10px 20px;
+		margin: 0 10px;
+		border-radius: 10px;
+	}
+
+	img {
+		width: 100%;
+		border-radius: 10px;
+		/* height: 200px; */
+	}
+
+	.p-center {
+		text-align: center;
+	}
+}

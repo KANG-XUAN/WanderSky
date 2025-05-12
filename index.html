@@ -1,0 +1,357 @@
+<!-- 修改自 _WEB
+	 0416_CSS布局軟體
+	 > 01_layoutit
+ 	   > src
+	     > index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>天下遊旅社</title>
+
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<link rel="stylesheet" href="./css/index.css">
+
+	<style>
+
+	</style>
+
+</head>
+
+<body>
+	<div class="main">
+		<div class="container bg-back">
+
+
+			<!-- 1. ▼導引列▼ -->
+			<div class="nav">
+				<div class="container">
+
+					<div class="row">
+						<nav class="navbar navbar-expand-sm bg-light navbar-light">
+							<!-- d-flex w-100 設定區塊
+								  flex-fill 自動分配 -->
+							<ul class="navbar-nav d-flex w-100 text-center">
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./index.html">首頁</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./product.html">行程</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./moneyChange.html">計算貨幣</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./register.html">註冊</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+			<!-- 1. ▲導引列▲ -->
+
+
+			<!-- 2. ▼標題區▼ -->
+			<div class="title mt-5">
+				<!-- <div class="container"> -->
+
+				<div class="row">
+					<div class="col">
+						<div class="jumbotron">
+							<h2>
+								探索世界，從這裡開始！
+							</h2>
+							<p>
+								無論你嚮往的是熱帶海灘、歷史古城，還是壯麗山脈，我們都為你準備好了最精彩的旅程。<br />
+								在這裡，你可以找到最實用的旅遊資訊、精選行程建議，以及來自世界各地旅人的真實分享。
+							</p>
+							<h4>
+							</h4>
+							<h3>
+								現在就開始計劃你的下一趟冒險吧！
+							</h3>
+							<h4>
+								——輸入你的目的地，我們會為你準備好一切。
+							</h4>
+							<br>
+							<p>
+								<a class="btn btn-primary btn-large" href="./register.html">現在開始</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- </div> -->
+			</div>
+			<!-- 2. ▲標題區▲ -->
+
+
+			<!-- 輪播圖片 -->
+			<div class="Imgcarouse">
+				<!-- <div class="container"> -->
+
+				<div class="row">
+					<div class="col-xl-2"></div>
+					<div class="col-xl-8">
+						<div class="carousel slide" id="carousel-907744">
+							<!-- 下方位置進度條 -->
+							<ol class="carousel-indicators">
+								<li data-slide-to="0" data-target="#carousel-907744">
+								</li>
+								<li data-slide-to="1" data-target="#carousel-907744">
+								</li>
+								<li data-slide-to="2" data-target="#carousel-907744" class="active">
+								</li>
+							</ol>
+							<!-- 圖片 -->
+							<div class="carousel-inner">
+								<!-- 第一張 -->
+								<div class="carousel-item">
+									<img class="d-block w-100" alt="Carousel Bootstrap First"
+										src="./images/Index_CB_First.jpg" />
+									<div class="carousel-caption">
+										<h4>
+											迷失在歐洲小鎮的午後時光
+										</h4>
+										<p>
+											漫步石板路，聽見歷史的低語。
+											遠離喧囂，在迷人的小鎮中尋找屬於你的秘密角落。咖啡香、教堂鐘聲與古老建築，讓人一秒愛上這份寧靜。
+										</p>
+									</div>
+								</div>
+								<!-- 第二張 -->
+								<div class="carousel-item">
+									<img class="d-block w-100" alt="Carousel Bootstrap Second"
+										src="./images/Index_CB_Second.jpg" />
+									<div class="carousel-caption">
+										<h4>
+											追逐極光的旅程：冰島不思議
+										</h4>
+										<p>
+											當天空點亮了綠色的夢。
+											站在雪地中仰望，一場絕美的自然奇蹟即將展開。搭配溫泉、冰河與火山的壯麗，冰島讓人忘記現實，只想沉醉。
+										</p>
+									</div>
+								</div>
+								<!-- 第三張 -->
+								<div class="carousel-item active">
+									<img class="d-block w-100" alt="Carousel Bootstrap Third"
+										src="./images/Index_CB_Third.jpg" />
+									<div class="carousel-caption">
+										<h4>
+											在峇里島醒來的每一個清晨
+										</h4>
+										<p>
+											陽光灑在海浪上，你的心也一起亮了起來。
+											私人泳池別墅、椰林沙灘與療癒的瑜伽時光，這裡不只是渡假，更是找回自己的旅程。
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- 左右換頁 -->
+							<a class="carousel-control-prev" href="#carousel-907744" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carousel-907744" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xl-2"></div>
+				</div>
+
+				<!-- </div> -->
+			</div>
+
+
+			<br>
+			<hr>
+			<br>
+
+			<!-- 3. ▼公司介紹▼ -->
+			<div class="introduce">
+				<!-- <div class="container"> -->
+
+				<div class="row">
+					<div class="col"><!-- 左側標語 -->
+						<div class="media">
+							<img style="height: 80px; width: 80px;" class="mr-3" alt="Bootstrap Media Preview"
+								src="./images/Index_BM_top.jpg" />
+							<div class="media-body">
+								<h5 class="mt-0">
+									我們是旅人，也是你的旅伴
+								</h5>
+								我們是一群走過世界角落的旅人，了解每段旅程中最真實的期待與需要。從美食小巷到秘境海灘，我們用自己的雙腳走出每條路，只為帶給你不一樣的在地體驗與回憶。
+								<p><br></p>
+								<div class="media mt-3">
+									<img style="height: 80px; width: 80px;" class="mr-3"
+										alt="Bootstrap Media Another Preview" src="./images/Index_BM_bottom.jpg" /></a>
+									<div class="media-body">
+										<h5 class="mt-0">
+											旅行不只是打卡
+										</h5>
+										我們相信旅行該有深度與溫度。每一條行程都經過細心設計，融合文化、風景與感動。
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col"><!-- 右側清單 -->
+						<ol>
+							<li>
+								<p>
+									<strong>專屬客製行程</strong><br /> 依據你的預算、喜好與旅行風格，量身打造獨一無二的行程安排。
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>在地旅遊專家團隊</strong><br /> 我們與當地導遊與合作夥伴緊密合作，帶你深入了解最道地的文化與景點。
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>價格透明無隱藏費用</strong><br /> 清楚列出所有費用細節，讓你旅遊預算安心掌握。
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><strong>真實旅人評價與遊記</strong></span><span>每條路線都可查看過往旅客的評語與經驗分享，讓你更安心選擇。</span>
+								</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+
+				<!-- </div> -->
+			</div>
+			<!-- 3. ▲公司介紹▲ -->
+
+			<br>
+			<hr>
+			<br>
+
+			<!-- 4. ▼人氣行程▼ -->
+			<div class="recommend">
+				<!-- <div class="container"> -->
+
+				<!-- 標題列 -->
+				<div class="row">
+					<div class="col">
+						<div class="page-header">
+							<h1>看看我們為你精選的超人氣行程！</h1>
+						</div>
+					</div>
+				</div>
+				<!-- 推薦列 -->
+				<div class="row">
+					<!-- 左 -->
+					<div class="col-md-4">
+						<div class="card">
+							<img class="card-img-top" alt="Bootstrap Thumbnail First"
+								src="./images/Index_BT_First.jpg" />
+							<div class="card-block">
+								<h5 class="card-title">
+									沖繩·海風慢旅 4 日遊
+								</h5>
+								<p class="card-text">
+									逃離都市節奏，來一場陽光與海風交織的慢活假期。從國際通的熱鬧街景到古宇利島的清澈海岸，盡情享受在地小吃、泡盛美酒與碧海藍天的療癒氛圍。還能體驗玻璃工藝、騎行海濱步道，每一刻都是放鬆與發現的交融。
+								</p>
+								<p>
+									<a class="btn btn-primary" href="#">了解更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- 中 -->
+					<div class="col-md-4">
+						<div class="card">
+							<img class="card-img-top" alt="Bootstrap Thumbnail Second"
+								src="./images/Index_BT_Second.jpg" />
+							<div class="card-block">
+								<h5 class="card-title">
+									德國童話小鎮 8 日精緻行程
+								</h5>
+								<p class="card-text">
+									穿梭在古老石板街、彩色木屋與城堡間，像走進一本會發光的童話書。從羅騰堡的中古世紀風情，到新天鵝堡的浪漫傳說，沿著德國浪漫之路品嚐手工香腸、在地啤酒與葡萄酒。行程節奏悠緩，適合想深度感受歐洲風情的你。
+								</p>
+								<p>
+									<a class="btn btn-primary" href="#">了解更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- 右 -->
+					<div class="col-md-4">
+						<div class="card">
+							<img class="card-img-top" alt="Bootstrap Thumbnail Third"
+								src="./images/Index_BT_Third.jpg" />
+							<div class="card-block">
+								<h5 class="card-title">
+									尼泊爾心靈之旅 6 日探索
+								</h5>
+								<p class="card-text">
+									在喜馬拉雅山麓的晨曦中啟程，沿著山徑緩步前行，每一步都是對自然的讚嘆與心靈的沉澱。行程穿插拜訪藏傳佛寺、手工藝村與當地家庭，體驗簡單卻深刻的生活智慧。夜晚入住溫馨山間旅舍，數星星、聽風聲，重新找回內心的寧靜。
+								</p>
+								<p>
+									<a class="btn btn-primary" href="#">了解更多</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- </div> -->
+			</div>
+			<!-- 4. ▲人氣行程▲ -->
+
+
+			<!-- E. ▼頁尾資訊▼ -->
+			<div class="footer mt-5">
+				<div class="container">
+
+					<!-- 4-1. 上方版權 -->
+					<div class="row">
+						<div class="col">
+							天下遊股份有限公司
+						</div>
+					</div>
+
+					<!-- 4-2. 下方資訊 -->
+					<div class="row">
+						<div class="col">
+							© 2025 康亘翔 專題作品
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- E. ▲頁尾資訊▲ -->
+
+
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

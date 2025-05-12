@@ -1,0 +1,15 @@
+export const userdatas = [	// 醜：打的時候少加 =
+	{ username: "帳號", password: "密碼", email: "郵箱", phone: "手機", birth: "生日" },
+	{ username: "alice123", password: "passAlice2024", email: "alice@example.com", phone: "0912345678", birth: "1995-08-15" },
+	{ username: "bob_the_dev", password: "bobDev@789", email: "bob.dev@gmail.com", phone: "0922333444", birth: "1990-03-22" },
+	{ username: "charlie_88", password: "charliePass88!", email: "charlie88@mail.com", phone: "0933555666", birth: "1988-12-05" },
+	{ username: "diana77", password: "dianaSecure77", email: "diana77@yahoo.com", phone: "0944111222", birth: "1992-06-30" },
+	{ username: "eric_wang", password: "ericW2024!", email: "eric.wang@outlook.com", phone: "0955666777", birth: "1985-11-09" },
+	{ username: "fiona_life", password: "F!onaPass999", email: "fiona.life@gmail.com", phone: "0966888999", birth: "1998-01-21" },
+	{ username: "george_kuo", password: "geo123456", email: "georgek@domain.com", phone: "0977123456", birth: "1987-04-12" },
+	{ username: "hannah88", password: "H@nnah88pass", email: "hannah88@mail.com", phone: "0988123123", birth: "1993-09-17" },
+	{ username: "ivan_dev", password: "IvanDev@321", email: "ivan.dev@protonmail.com", phone: "0999000111", birth: "1991-07-03" },
+	{ username: "jenny123", password: "JennyLove123", email: "jenny123@gmail.com", phone: "0911002233", birth: "1996-12-25" },
+	{ username: "kevin.chen", password: "K3v!nChen777", email: "kevin.chen@company.com", phone: "0933004455", birth: "1989-05-18" },
+	{ username: "end", password: "end", email: "end@gmail.com", phone: "0000000000", birth: "1945-01-11" },
+];

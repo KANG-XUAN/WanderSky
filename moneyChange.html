@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/moneyChange.css">
+
+	<style>
+		.reSult {
+			text-align: right;
+			color: red !important;
+			padding-right: 35px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="container bg-back">
+
+
+			<!-- 1. ▼導引列▼ -->
+			<div class="nav">
+				<div class="container">
+
+					<div class="row">
+						<nav class="navbar navbar-expand-sm bg-light navbar-light">
+							<!-- d-flex w-100 設定區塊
+								  flex-fill 自動分配 -->
+							<ul class="navbar-nav d-flex w-100 text-center">
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./index.html">首頁</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./product.html">行程</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./moneyChange.html">計算貨幣</a>
+								</li>
+								<li class="nav-item flex-fill nav-hr">
+									<a class="nav-link" href="./register.html">註冊</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+			<!-- 1. ▲導引列▲ -->
+
+
+			<!-- 2. ▼換算區▼ -->
+			<div class="calc mt-5">
+				<div class="container">
+
+					<div class="row">
+						<div class="col">
+							<h2>貨幣換算</h2>
+							<hr>
+							<span>請輸入欲換算的金額（新台幣🇹🇼）：</span>
+							<input type="text" id="inp_money" value="180">
+							<!-- <button type="button" onclick="calc_money()">轉換</button> -->
+							<button type="button" onclick="calc_money_Advanced()">轉換</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 2. ▲換算區▲ -->
+
+
+			<!-- 3 ▼結果區▼ -->
+			<div class="centent mt-5 text-center">
+				<h2 class="text-center">結果</h2>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th style="width: 15%;">#</th>
+									<th style="width: 35%;">幣種</th>
+									<th style="width: 25%;">匯率</th>
+									<th style="width: 25%;">結果</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td id="reFlag_01">&nbsp;</td>
+									<td id="reCode_01">&nbsp;</td>
+									<td id="reRate_01">&nbsp;</td>
+									<td id="reSult_01" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_02">&nbsp;</td>
+									<td id="reCode_02">&nbsp;</td>
+									<td id="reRate_02">&nbsp;</td>
+									<td id="reSult_02" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_03">&nbsp;</td>
+									<td id="reCode_03">&nbsp;</td>
+									<td id="reRate_03">&nbsp;</td>
+									<td id="reSult_03" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_04">&nbsp;</td>
+									<td id="reCode_04">&nbsp;</td>
+									<td id="reRate_04">&nbsp;</td>
+									<td id="reSult_04" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_05">&nbsp;</td>
+									<td id="reCode_05">&nbsp;</td>
+									<td id="reRate_05">&nbsp;</td>
+									<td id="reSult_05" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_06">&nbsp;</td>
+									<td id="reCode_06">&nbsp;</td>
+									<td id="reRate_06">&nbsp;</td>
+									<td id="reSult_06" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_07">&nbsp;</td>
+									<td id="reCode_07">&nbsp;</td>
+									<td id="reRate_07">&nbsp;</td>
+									<td id="reSult_07" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_08">&nbsp;</td>
+									<td id="reCode_08">&nbsp;</td>
+									<td id="reRate_08">&nbsp;</td>
+									<td id="reSult_08" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_09">&nbsp;</td>
+									<td id="reCode_09">&nbsp;</td>
+									<td id="reRate_09">&nbsp;</td>
+									<td id="reSult_09" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_10">&nbsp;</td>
+									<td id="reCode_10">&nbsp;</td>
+									<td id="reRate_10">&nbsp;</td>
+									<td id="reSult_10" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_11">&nbsp;</td>
+									<td id="reCode_11">&nbsp;</td>
+									<td id="reRate_11">&nbsp;</td>
+									<td id="reSult_11" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_12">&nbsp;</td>
+									<td id="reCode_12">&nbsp;</td>
+									<td id="reRate_12">&nbsp;</td>
+									<td id="reSult_12" class="reSult">&nbsp;</td>
+								</tr>
+								<tr>
+									<td id="reFlag_13">&nbsp;</td>
+									<td id="reCode_13">&nbsp;</td>
+									<td id="reRate_13">&nbsp;</td>
+									<td id="reSult_13" class="reSult">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 3. ▲結果區▲ -->
+
+
+			<!-- E. ▼頁尾資訊▼ -->
+			<div class="footer mt-5">
+				<div class="container">
+
+					<!-- 4-1. 上方版權 -->
+					<div class="row">
+						<div class="col">
+							天下遊股份有限公司
+						</div>
+					</div>
+
+					<!-- 4-2. 下方資訊 -->
+					<div class="row">
+						<div class="col">
+							© 2025 康亘翔 專題作品
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- E. ▲頁尾資訊▲ -->
+
+
+		</div>
+	</div>
+
+
+</body>
+<script>
+
+	// 進階方法 (根據 GPT 教法自寫一遍)
+	function calc_money_Advanced() {
+		// 請 GPT 生成的常用匯率表
+		const currencyList = [
+			{ flag: "國家代號", name: "國家名稱", code: "貨幣縮寫", fullName: "貨幣名稱", rate: "匯率" },
+			{ flag: "🇺🇸", name: "美國", code: "USD", fullName: "美元", rate: 0.032 },
+			{ flag: "🇯🇵", name: "日本", code: "JPY", fullName: "日圓", rate: 4.7 },
+			{ flag: "🇰🇷", name: "韓國", code: "KRW", fullName: "韓圓", rate: 42 },
+			{ flag: "🇨🇳", name: "中國", code: "CNY", fullName: "人民幣", rate: 0.23 },
+			{ flag: "🇪🇺", name: "歐盟", code: "EUR", fullName: "歐元", rate: 0.029 },
+			{ flag: "🇭🇰", name: "香港", code: "HKD", fullName: "港幣", rate: 0.25 },
+			{ flag: "🇬🇧", name: "英國", code: "GBP", fullName: "英鎊", rate: 0.026 },
+			{ flag: "🇦🇺", name: "澳洲", code: "AUD", fullName: "澳幣", rate: 0.048 },
+			{ flag: "🇨🇦", name: "加拿大", code: "CAD", fullName: "加幣", rate: 0.044 },
+			{ flag: "🇸🇬", name: "新加坡", code: "SGD", fullName: "新幣", rate: 0.043 },
+			{ flag: "🇹🇭", name: "泰國", code: "THB", fullName: "泰銖", rate: 1.15 },
+			{ flag: "🇲🇾", name: "馬來西亞", code: "MYR", fullName: "馬幣", rate: 0.15 },
+			{ flag: "🇮🇩", name: "印尼", code: "IDR", fullName: "印尼盾", rate: 505 }
+		];
+
+		const inp_money = parseFloat(document.getElementById("inp_money").value);
+
+		for (let n = 1; n < currencyList.length; n++) {
+
+			const my = currencyList[n];
+
+			// toString 忘記加 ()
+			const index = n.toString().padStart(2, "0");
+
+			const reSult = inp_money * my.rate;
+			document.getElementById(`reFlag_${index}`).innerText = my.flag;
+			document.getElementById(`reCode_${index}`).innerText = `${my.fullName}（${my.code}）`;
+			document.getElementById(`reRate_${index}`).innerText = my.rate;
+			// 忘記把 my. 去掉
+			document.getElementById(`reSult_${index}`).innerText = reSult.toFixed(2);
+		}
+
+
+
+	}
+
+	// GPT 改良 (自加備註並理解)
+	function calc_money_GPT() {
+		// 請 GPT 生成的常用匯率表
+		const currencyList = [
+			{ flag: "國家代號", name: "國家名稱", code: "貨幣縮寫", fullName: "貨幣名稱", rate: "匯率" },
+			{ flag: "🇺🇸", name: "美國", code: "USD", fullName: "美元", rate: 0.032 },
+			{ flag: "🇯🇵", name: "日本", code: "JPY", fullName: "日圓", rate: 4.7 },
+			{ flag: "🇰🇷", name: "韓國", code: "KRW", fullName: "韓圓", rate: 42 },
+			{ flag: "🇨🇳", name: "中國", code: "CNY", fullName: "人民幣", rate: 0.23 },
+			{ flag: "🇪🇺", name: "歐盟", code: "EUR", fullName: "歐元", rate: 0.029 },
+			{ flag: "🇭🇰", name: "香港", code: "HKD", fullName: "港幣", rate: 0.25 },
+			{ flag: "🇬🇧", name: "英國", code: "GBP", fullName: "英鎊", rate: 0.026 },
+			{ flag: "🇦🇺", name: "澳洲", code: "AUD", fullName: "澳幣", rate: 0.048 },
+			{ flag: "🇨🇦", name: "加拿大", code: "CAD", fullName: "加幣", rate: 0.044 },
+			{ flag: "🇸🇬", name: "新加坡", code: "SGD", fullName: "新幣", rate: 0.043 },
+			{ flag: "🇹🇭", name: "泰國", code: "THB", fullName: "泰銖", rate: 1.15 },
+			{ flag: "🇲🇾", name: "馬來西亞", code: "MYR", fullName: "馬幣", rate: 0.15 },
+			{ flag: "🇮🇩", name: "印尼", code: "IDR", fullName: "印尼盾", rate: 505 }
+		];
+
+		let inp_money = parseFloat(document.getElementById("inp_money").value);
+
+
+		// 從第1筆開始（跳過表頭那筆）
+		for (let i = 1; i < currencyList.length; i++) {	// 基礎迴圈寫法
+			const item = currencyList[i];	// 簡化寫法,不然程式會沒意義的過長
+
+
+			// ▼ 只使用一次，不存到 ObjectList 內部
+			const reSult = inp_money * item.rate;
+			// ▼ 保存在資料裡、日後要重複用
+			// item.reSult = inp_money * item.rate;
+
+
+			// 製作 HTML ID 字串
+			// padStart(2, '0') -> 沒到 "2" 位數的補 "0"
+			let idSuffix = i.toString().padStart(2, '0'); // 01, 02, 03...
+
+			// 用 `` 反引號啟動模板字串（Template Literal）
+			document.getElementById(`reFlag_${idSuffix}`).innerText = item.flag;
+			// 在最後用 `` 可以不用太長的 + + + 更為精簡，也見到模板字串的另一種用法
+			document.getElementById(`reCode_${idSuffix}`).innerText = `${item.fullName}（${item.code}）`;
+			document.getElementById(`reRate_${idSuffix}`).innerText = item.rate;
+			document.getElementById(`reSult_${idSuffix}`).innerText = reSult.toFixed(2);
+		}
+	}
+
+
+	// 土方法(全部列出)
+	function calc_money() {
+		// 請 GPT 生成的常用匯率表
+		const currencyList = [
+			{ flag: "國家代號", name: "國家名稱", code: "貨幣縮寫", fullName: "貨幣名稱", rate: "匯率" },
+			{ flag: "🇺🇸", name: "美國", code: "USD", fullName: "美元", rate: 0.032 },
+			{ flag: "🇯🇵", name: "日本", code: "JPY", fullName: "日圓", rate: 4.7 },
+			{ flag: "🇰🇷", name: "韓國", code: "KRW", fullName: "韓圓", rate: 42 },
+			{ flag: "🇨🇳", name: "中國", code: "CNY", fullName: "人民幣", rate: 0.23 },
+			{ flag: "🇪🇺", name: "歐盟", code: "EUR", fullName: "歐元", rate: 0.029 },
+			{ flag: "🇭🇰", name: "香港", code: "HKD", fullName: "港幣", rate: 0.25 },
+			{ flag: "🇬🇧", name: "英國", code: "GBP", fullName: "英鎊", rate: 0.026 },
+			{ flag: "🇦🇺", name: "澳洲", code: "AUD", fullName: "澳幣", rate: 0.048 },
+			{ flag: "🇨🇦", name: "加拿大", code: "CAD", fullName: "加幣", rate: 0.044 },
+			{ flag: "🇸🇬", name: "新加坡", code: "SGD", fullName: "新幣", rate: 0.043 },
+			{ flag: "🇹🇭", name: "泰國", code: "THB", fullName: "泰銖", rate: 1.15 },
+			{ flag: "🇲🇾", name: "馬來西亞", code: "MYR", fullName: "馬幣", rate: 0.15 },
+			{ flag: "🇮🇩", name: "印尼", code: "IDR", fullName: "印尼盾", rate: 505 }
+		];
+
+		let inp_money = parseFloat(document.getElementById("inp_money").value);
+
+		currencyList[1].reSult = inp_money * currencyList[1].rate;
+		document.getElementById("reFlag_01").innerText = currencyList[1].flag;
+		document.getElementById("reCode_01").innerText = currencyList[1].fullName + "（" + currencyList[1].code + "）";
+		document.getElementById("reRate_01").innerText = currencyList[1].rate;
+		document.getElementById("reSult_01").innerText = currencyList[1].reSult.toFixed(2);
+
+		currencyList[2].reSult = inp_money * currencyList[2].rate;
+		document.getElementById("reFlag_02").innerText = currencyList[2].flag;
+		document.getElementById("reCode_02").innerText = currencyList[2].fullName + "（" + currencyList[2].code + "）";
+		document.getElementById("reRate_02").innerText = currencyList[2].rate;
+		document.getElementById("reSult_02").innerText = currencyList[2].reSult.toFixed(2);
+
+		currencyList[3].reSult = inp_money * currencyList[3].rate;
+		document.getElementById("reFlag_03").innerText = currencyList[3].flag;
+		document.getElementById("reCode_03").innerText = currencyList[3].fullName + "（" + currencyList[3].code + "）";
+		document.getElementById("reRate_03").innerText = currencyList[3].rate;
+		document.getElementById("reSult_03").innerText = currencyList[3].reSult.toFixed(2);
+
+		currencyList[4].reSult = inp_money * currencyList[4].rate;
+		document.getElementById("reFlag_04").innerText = currencyList[4].flag;
+		document.getElementById("reCode_04").innerText = currencyList[4].fullName + "（" + currencyList[4].code + "）";
+		document.getElementById("reRate_04").innerText = currencyList[4].rate;
+		document.getElementById("reSult_04").innerText = currencyList[4].reSult.toFixed(2);
+
+		currencyList[5].reSult = inp_money * currencyList[5].rate;
+		document.getElementById("reFlag_05").innerText = currencyList[5].flag;
+		document.getElementById("reCode_05").innerText = currencyList[5].fullName + "（" + currencyList[5].code + "）";
+		document.getElementById("reRate_05").innerText = currencyList[5].rate;
+		document.getElementById("reSult_05").innerText = currencyList[5].reSult.toFixed(2);
+
+		currencyList[6].reSult = inp_money * currencyList[6].rate;
+		document.getElementById("reFlag_06").innerText = currencyList[6].flag;
+		document.getElementById("reCode_06").innerText = currencyList[6].fullName + "（" + currencyList[6].code + "）";
+		document.getElementById("reRate_06").innerText = currencyList[6].rate;
+		document.getElementById("reSult_06").innerText = currencyList[6].reSult.toFixed(2);
+
+		currencyList[7].reSult = inp_money * currencyList[7].rate;
+		document.getElementById("reFlag_07").innerText = currencyList[7].flag;
+		document.getElementById("reCode_07").innerText = currencyList[7].fullName + "（" + currencyList[7].code + "）";
+		document.getElementById("reRate_07").innerText = currencyList[7].rate;
+		document.getElementById("reSult_07").innerText = currencyList[7].reSult.toFixed(2);
+
+		currencyList[8].reSult = inp_money * currencyList[8].rate;
+		document.getElementById("reFlag_08").innerText = currencyList[8].flag;
+		document.getElementById("reCode_08").innerText = currencyList[8].fullName + "（" + currencyList[8].code + "）";
+		document.getElementById("reRate_08").innerText = currencyList[8].rate;
+		document.getElementById("reSult_08").innerText = currencyList[8].reSult.toFixed(2);
+
+		currencyList[9].reSult = inp_money * currencyList[9].rate;
+		document.getElementById("reFlag_09").innerText = currencyList[9].flag;
+		document.getElementById("reCode_09").innerText = currencyList[9].fullName + "（" + currencyList[9].code + "）";
+		document.getElementById("reRate_09").innerText = currencyList[9].rate;
+		document.getElementById("reSult_09").innerText = currencyList[9].reSult.toFixed(2);
+
+		currencyList[10].reSult = inp_money * currencyList[10].rate;
+		document.getElementById("reFlag_10").innerText = currencyList[10].flag;
+		document.getElementById("reCode_10").innerText = currencyList[10].fullName + "（" + currencyList[10].code + "）";
+		document.getElementById("reRate_10").innerText = currencyList[10].rate;
+		document.getElementById("reSult_10").innerText = currencyList[10].reSult.toFixed(2);
+
+		currencyList[11].reSult = inp_money * currencyList[11].rate;
+		document.getElementById("reFlag_11").innerText = currencyList[11].flag;
+		document.getElementById("reCode_11").innerText = currencyList[11].fullName + "（" + currencyList[11].code + "）";
+		document.getElementById("reRate_11").innerText = currencyList[11].rate;
+		document.getElementById("reSult_11").innerText = currencyList[11].reSult.toFixed(2);
+
+		currencyList[12].reSult = inp_money * currencyList[12].rate;
+		document.getElementById("reFlag_12").innerText = currencyList[12].flag;
+		document.getElementById("reCode_12").innerText = currencyList[12].fullName + "（" + currencyList[12].code + "）";
+		document.getElementById("reRate_12").innerText = currencyList[12].rate;
+		document.getElementById("reSult_12").innerText = currencyList[12].reSult.toFixed(2);
+
+		currencyList[13].reSult = inp_money * currencyList[13].rate;
+		document.getElementById("reFlag_13").innerText = currencyList[13].flag;
+		document.getElementById("reCode_13").innerText = currencyList[13].fullName + "（" + currencyList[13].code + "）";
+		document.getElementById("reRate_13").innerText = currencyList[13].rate;
+		document.getElementById("reSult_13").innerText = currencyList[13].reSult.toFixed(2);
+
+	}
+
+</script>
+
+</html>
